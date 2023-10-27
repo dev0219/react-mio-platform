@@ -30,6 +30,7 @@ import {
   Pagination,
   PaginationItem,
   PaginationLink,
+  Button,
   Progress,
   Table,
   Container,
@@ -120,38 +121,7 @@ const Devices = () => {
                         {getLastActivate(item.lastActive)}
                       </td>
                       <td className="text-right">
-                        <UncontrolledDropdown>
-                          <DropdownToggle
-                            className="btn-icon-only text-light"
-                            href="#pablo"
-                            role="button"
-                            size="sm"
-                            color=""
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            <i className="fas fa-ellipsis-v" />
-                          </DropdownToggle>
-                          <DropdownMenu className="dropdown-menu-arrow" right>
-                            <DropdownItem
-                              href="#pablo"
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              <Link to={"/admin/device/"+item.deviceId}>View Telemetry</Link>
-                            </DropdownItem>
-                            <DropdownItem
-                              href="#pablo"
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              ...
-                            </DropdownItem>
-                            <DropdownItem
-                              href="#pablo"
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              ...
-                            </DropdownItem>
-                          </DropdownMenu>
-                        </UncontrolledDropdown>
+                        <Button><Link to={"/admin/device/"+item.deviceId}>View Telemetry</Link></Button>
                       </td>
                     </tr>
                     )

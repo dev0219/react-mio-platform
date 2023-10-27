@@ -135,6 +135,7 @@ const Telemetry = () => {
                                 {udpateDataArr[0]['deviceData']['pul'] && <th>Systolic</th>}
                                 {udpateDataArr[0]['deviceData']['pul'] && <th>Diastolic</th>}
                                 {udpateDataArr[0]['deviceData']['pul'] && <th>Hand Tremor</th>}
+                                <th scope="col">Last Active</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -159,6 +160,9 @@ const Telemetry = () => {
                                   {item['deviceData']['pul'] && <td>{item['deviceData']['sys']}</td>}
                                   {item['deviceData']['pul'] && <td>{item['deviceData']['dia']}</td>}
                                   {item['deviceData']['pul'] && <td>{JSON.stringify(item['deviceData']['hand'])}</td>}
+                                  <td>
+                                    {SetValue(item['createdAt'], "ts")}
+                                  </td>
                                 </tr>
                                 )
                               })}
